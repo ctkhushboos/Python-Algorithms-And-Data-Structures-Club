@@ -8,7 +8,8 @@ the best way of learning is learning by doing, so i am going to implement all po
 # Basic
 * [Stack](./Queues/Stack.py)
 * [Queue](./Queues/Queue.py)
-* [Insertion Sort](./sorting/InsertionSort.py)
+* [Insertion Sort](./sorting/Insertion_Sort.py)
+* [Binary Search](./search/Binary_Search.py)
  
 
 
