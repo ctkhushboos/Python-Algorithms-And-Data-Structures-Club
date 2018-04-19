@@ -10,6 +10,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Queue](./Queues/Queue.py)
 * [Insertion Sort](./sorting/Insertion_Sort.py)
 * [Binary Search](./search/Binary_Search.py)
+* [Binary Search Tree](./tree/Binary_Search_Tree.py)
  
 
 
