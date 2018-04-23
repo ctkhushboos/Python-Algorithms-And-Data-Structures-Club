@@ -11,11 +11,6 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Insertion Sort](./sorting/Insertion_Sort.py)
 * [Binary Search](./search/Binary_Search.py)
 * [Binary Search Tree](./tree/Binary_Search_Tree.py)
-<<<<<<< HEAD
-=======
-* [Merge Sort](./sorting/Merge_Sort.py)
- 
->>>>>>> ea558f063dc5af631daf46cd3f564b94a91e6cde
 
 # Data structures
 
@@ -24,4 +19,5 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Stack](./Queues/Stack.py). Last-in, first-out!
 * [Queue](./Queues/Queue.py). First-in, first-out!
 * [Deque](./Queues/Deque.py). A double-ended queue.
+* [Priority Queue](./Queues/Priority_Queue.py). A queue where the most important element is always at the front.
 
