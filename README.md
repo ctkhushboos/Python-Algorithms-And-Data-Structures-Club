@@ -21,3 +21,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Deque](./Queues/Deque.py). A double-ended queue.
 * [Priority Queue](./Queues/Priority_Queue.py). A queue where the most important element is always at the front.
 
+## Tree
+* [Binary Tree (BST)](./Tree/Binary_Search_Tree.py).  A binary tree that orders its nodes in a way that allows for fast queries.
+* [Heap](./Tree/Heap.py). A binary tree stored in an array, so it doesn't use pointers. Makes a great priority queue.
+Fibonacci Heap
