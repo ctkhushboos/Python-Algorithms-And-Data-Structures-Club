@@ -35,7 +35,7 @@ class Heap:
     def order_criteria(self):
         """
             determines how to compare two nodes in the heap.
-            use '>' for a max-heap or '<' for a min-heap, or provide a comparing
+            use 'order' for a max-heap or 'reverse' for a min-heap, or provide a comparing
             method if the heap is made of custom elements, for example tuple
         """
         return self.sort
