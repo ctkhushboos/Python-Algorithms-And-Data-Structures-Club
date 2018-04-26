@@ -21,16 +21,47 @@ All heap operations are O(log n).
 
 """
 
-class Heap:
-    pass
+import sys
+sys.path.append('../Tree/')
+
+from Heap import*
+
+def order(value1, value2):
+    return value1 < value2
+
+def reverse(value1, value2):
+    return value1 > value2
 
 
 class Priority_Queue:
-    def __init__(self):
-        pass
+    def __init__(self, sort):
+        self.heap = Heap([], sort)
 
+    def __repr__(self):
+        return '{}'.format(self.heap)
 
+    @property
+    def count(self):
+        return self.heap.count
 
+    def is_empty(self):
+        self.heap.is_empty()
+
+    def peek(self):
+        return self.peek()
+
+    def enqueue(self, element):
+        self.heap.insert(element)
+
+    def dequeue(self):
+        return self.heap.remove()
+
+    def change_priority(self, index, value):
+        return self.heap.replace(index, value)
 
 if __name__ == '__main__':
-    pass
+    _list = [1, 2, 3, 4, 5]
+    p = Priority_Queue(order)
+    for l in _list:
+        p.enqueue(l)
+    print(p)

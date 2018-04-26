@@ -8,8 +8,15 @@
     implement in array
 """
 
+
+def order(value_1, value_2):
+    return value_1 < value_2
+
+def reverse(value_1, value_2):
+    return value_1 > value_2
+
 class Heap:
-    def __init__(self, array, sort):
+    def __init__(self, array=[], sort=order):
         self.sort = sort
         self.configure_heap(array)
 
@@ -51,7 +58,7 @@ class Heap:
             return the index of parent of the element at index i
             the element at index 0 is the root of the tree and has no parent
         """
-        return (index - 2) / 2
+        return int((index - 2) / 2)
 
     def left_child_index(self, index):
         """
@@ -59,7 +66,7 @@ class Heap:
             note that this index can be greater than the heap size, in which
             case there is not left child
         """
-        return 2 * index + 1
+        return int(2 * index + 1)
 
     def right_child_index(self, index):
         """
@@ -67,7 +74,7 @@ class Heap:
             note that this index can be greater than the heap size, in which
             case there is not right child
         """
-        return 2 * index + 2
+        return int(2 * index + 2)
 
 
     def peak(self):
@@ -87,7 +94,7 @@ class Heap:
             performance: O(log n)
         """
         self.nodes.append(value)
-        shift_up(len(self.nodes) - 1)
+        self.shift_up(len(self.nodes) - 1)
 
     def insert_sequence(self, sequence):
         """
@@ -139,12 +146,12 @@ class Heap:
         size = len(self.nodes) - 1
         if not index == size:
             self.nodes.swap_at(index, size)
-            shift_down_from(index, size)
-            shift_up(index)
+            self.shift_down_from(index, size)
+            self.shift_up(index)
 
         return self.nodes.remove_last()
 
-    def shiftt_up(self, index):
+    def shift_up(self, index):
         """
             takes a child node and looks at its parents; if a parent is not
             larger (max-heap) or not smaller (min-heap) than the child, we
@@ -154,8 +161,7 @@ class Heap:
         child = self.nodes[child_index]
         parent_index = self.parent_index(child_index)
 
-        while child_index > 0 and self.order_criteria(child, (
-        self.nodes[parent_index])):
+        while child_index > 0 and self.order_criteria(child, self.nodes[parent_index]):
             self.nodes[child_index] = self.nodes[parent_index]
             child_index = parent_index
             parent_index = self.parent_index(child_index)
@@ -197,13 +203,8 @@ class Heap:
         self.nodes[index_2] = temp
 
 
-def order(value_1, value_2):
-    return value_1 < value_2
-
-def reverse(value_1, value_2):
-    return value_1 > value_2
-
 if __name__ == '__main__':
     _list = [1, 2, 3, 4, 5]
     heap = Heap(_list, reverse)
+    heap.insert(1)
     print(heap)
