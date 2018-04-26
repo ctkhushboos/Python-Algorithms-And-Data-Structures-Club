@@ -24,4 +24,4 @@ the best way of learning is learning by doing, so i am going to implement all po
 ## Tree
 * [Binary Tree (BST)](./Tree/Binary_Search_Tree.py).  A binary tree that orders its nodes in a way that allows for fast queries.
 * [Heap](./Tree/Heap.py). A binary tree stored in an array, so it doesn't use pointers. Makes a great priority queue.
-Fibonacci Heap
+Fibonacci Heap. 
