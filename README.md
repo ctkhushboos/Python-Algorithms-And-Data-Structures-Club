@@ -20,6 +20,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Queue](./Queues/Queue.py). First-in, first-out!
 * [Deque](./Queues/Deque.py). A double-ended queue.
 * [Priority Queue](./Queues/Priority_Queue.py). A queue where the most important element is always at the front.
+* [Ring Buffer](./Queues/Ring_buffer.py). Also known as a circular buffer. An array of a certain size that conceptually wraps around back to the beginning.
 
 ## Tree
 * [Binary Tree (BST)](./tree/Binary_Search_Tree.py).  A binary tree that orders its nodes in a way that allows for fast queries.
