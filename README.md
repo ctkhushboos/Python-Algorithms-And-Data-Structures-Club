@@ -22,6 +22,10 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Priority Queue](./Queues/Priority_Queue.py). A queue where the most important element is always at the front.
 * [Ring Buffer](./Queues/Ring_buffer.py). Also known as a circular buffer. An array of a certain size that conceptually wraps around back to the beginning.
 
+## List 
+* [Linked List](./list/Link_List.py). A sequence of data items connected through links. Covers both singly and doubly linked lists.
+
+
 ## Tree
 * [Binary Tree (BST)](./tree/Binary_Search_Tree.py).  A binary tree that orders its nodes in a way that allows for fast queries.
 * [Heap](./tree/Heap.py). A binary tree stored in an array, so it doesn't use pointers. Makes a great priority queue.
