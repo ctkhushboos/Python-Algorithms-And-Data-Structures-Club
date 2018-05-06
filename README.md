@@ -15,8 +15,11 @@ the best way of learning is learning by doing, so i am going to implement all po
 # Data structures
 
 ## Sorting 
+
 ### Basic sorts:
 * [Insertion Sort](./sorting/Insertion_Sort.py)
+* [Selection Sort](./sorting/Selection_Sort.py)
+* [Shell Sort](./sorting/Shell_Sort.py)
 
 ### Fast sorts:
 * [Merge Sort](./sorting/Merge_Sort.py)
