@@ -14,6 +14,13 @@ the best way of learning is learning by doing, so i am going to implement all po
 
 # Data structures
 
+## Sorting 
+### Basic sorts:
+* [Insertion Sort](./sorting/Insertion_Sort.py)
+
+### Fast sorts:
+* [Merge Sort](./sorting/Merge_Sort.py)
+
 ## Queues
  
 * [Stack](./Queues/Stack.py). Last-in, first-out!
@@ -24,6 +31,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 
 ## List 
 * [Linked List](./list/Link_List.py). A sequence of data items connected through links. Covers both singly and doubly linked lists.
+* [Skip List](./list/Skip_List.py). Skip List is a probabilistic data-structure with same logarithmic time bound and efficiency as AVL/ or Red-Black tree and provides a clever compromise to efficiently support search and update operations.
 
 
 ## Tree
