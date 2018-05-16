@@ -22,6 +22,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Shell Sort](./sorting/Shell_Sort.py)
 
 ### Fast sorts:
+* [Quick Sort](./sorting/Quick_Sort.py)
 * [Merge Sort](./sorting/Merge_Sort.py)
 
 ## Queues
