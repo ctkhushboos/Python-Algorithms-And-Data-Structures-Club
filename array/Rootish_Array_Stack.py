@@ -92,7 +92,8 @@ if __name__ == "__main__":
     r.insert(6, 0)
     r.insert(100, 0)
     r.insert(1000, 0)
-
+    r.append(-6)
     r.remove(2)
+    r.append(88)
 
     print(r)
