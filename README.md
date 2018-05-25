@@ -12,7 +12,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Binary Search](./search/Binary_Search.py)
 * [Binary Search Tree](./tree/Binary_Search_Tree.py)
 
-# Data structures
+# The Algorithms
 
 ## Sorting 
 
@@ -25,6 +25,11 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Quick Sort](./sorting/Quick_Sort.py)
 * [Merge Sort](./sorting/Merge_Sort.py)
 * [Heap Sort](./sorting/Heap_Sort.py)
+
+# Data structures
+
+## Variations on Arrays
+* [Array2D](./array/Array_2D.py). A two-dimensional array with fixed dimensions. Useful for board games.
 
 ## Queues
  
