@@ -32,6 +32,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 * [Array2D](./array/Array_2D.py). A two-dimensional array with fixed dimensions. Useful for board games.
 * Bit Set. A fixed-size sequence of n bits.
 * [Fixed-Size Array](./array/Fixed_Size_Array.py). When you know beforehand how large your data will be, it might be more efficient to use an old-fashioned array with a fixed size.
+* [Ordered Array](./array/Ordered_Array.py). An array that is always sorted.
 
 ## Queues
  
