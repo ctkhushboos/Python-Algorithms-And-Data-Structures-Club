@@ -33,6 +33,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 * Bit Set. A fixed-size sequence of n bits.
 * [Fixed-Size Array](./array/Fixed_Size_Array.py). When you know beforehand how large your data will be, it might be more efficient to use an old-fashioned array with a fixed size.
 * [Ordered Array](./array/Ordered_Array.py). An array that is always sorted.
+* [Rootish Array Stack](./array/Rootish_Array_Stack.py)
 
 ## Queues
  
