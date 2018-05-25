@@ -24,6 +24,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 ### Fast sorts:
 * [Quick Sort](./sorting/Quick_Sort.py)
 * [Merge Sort](./sorting/Merge_Sort.py)
+* [Heap Sort](./sorting/Heap_Sort.py)
 
 ## Queues
  
