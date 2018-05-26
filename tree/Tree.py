@@ -4,7 +4,7 @@
 
 """
 
-class Tree_Node:
+class TreeNode(object):
     def __init__(self, value):
         self._value = value
         self._childern = []
@@ -48,9 +48,9 @@ class Tree_Node:
 
 
 if __name__ == "__main__":
-    root = Tree_Node("root")
-    root.add_caild(Tree_Node("jamfly"))
-    root.add_caild(Tree_Node("henry"))
-    root.add_caild(Tree_Node("cool_1"))
+    root = TreeNode("root")
+    root.add_caild(TreeNode("jamfly"))
+    root.add_caild(TreeNode("henry"))
+    root.add_caild(TreeNode("cool_1"))
     print(root)
     print(root.search("trump"))

@@ -7,7 +7,7 @@
     A more efficient way to implement a queue is to use a ring buffer or circular buffer. This is an array that conceptually wraps around back to the beginning, so you never have to remove any items. All operations are O(1).
 """
 
-class Ring_Buffer:
+class RingBuffer(object):
     def __init__(self, count):
         self.buffer = [None] * count
         self.read_index = 0
@@ -46,7 +46,7 @@ class Ring_Buffer:
             return None
 
 if __name__ == '__main__':
-    buffer = Ring_Buffer(5)
+    buffer = RingBuffer(5)
     buffer.write(123)
     buffer.write(456)
     buffer.write(789)

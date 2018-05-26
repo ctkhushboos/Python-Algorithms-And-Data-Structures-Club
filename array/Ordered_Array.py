@@ -13,7 +13,7 @@ it's probably faster to use a regular array and sort it manually.
 """
 
 
-class Orderd_Array:
+class OrderdArray(object):
 
     def __init__(self, array):
         self._array = sorted(array)
@@ -70,7 +70,7 @@ class Orderd_Array:
 
 
 if __name__ == "__main__":
-    a = Orderd_Array(array=[5, 1, 3, 9, 7, -1])
+    a = OrderdArray(array=[5, 1, 3, 9, 7, -1])
 
     print(a)
 

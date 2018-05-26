@@ -33,7 +33,7 @@ def reverse(value1, value2):
     return value1 > value2
 
 
-class Priority_Queue:
+class PriorityQueue(object):
     def __init__(self, sort):
         self.heap = Heap([], sort)
 
@@ -61,7 +61,7 @@ class Priority_Queue:
 
 if __name__ == '__main__':
     _list = [1, 2, 3, 4, 5]
-    p = Priority_Queue(order)
+    p = PriorityQueue(order)
     for l in _list:
         p.enqueue(l)
     print(p)

@@ -7,7 +7,7 @@
 """
 from collections import deque
 
-class Deque:
+class Deque(object):
     def __init__(self):
         self.deque = deque()
 

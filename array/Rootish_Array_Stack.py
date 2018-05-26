@@ -13,7 +13,7 @@
 
 import math
 
-class Rootish_Array_Stack:
+class RootishArrayStack(object):
     def __init__(self):
         self._blocks = []
         self._internal_count = 0
@@ -88,7 +88,7 @@ class Rootish_Array_Stack:
 
 
 if __name__ == "__main__":
-    r = Rootish_Array_Stack()
+    r = RootishArrayStack()
     r.insert(6, 0)
     r.insert(100, 0)
     r.insert(1000, 0)

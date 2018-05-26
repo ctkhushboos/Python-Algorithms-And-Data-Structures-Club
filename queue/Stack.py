@@ -4,7 +4,7 @@
    Adding at the end is O(1)
 """
 
-class Stack:
+class Stack(object):
     def __init__(self):
         self.list_ = []
 

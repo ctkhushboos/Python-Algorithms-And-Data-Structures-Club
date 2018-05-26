@@ -8,7 +8,7 @@
     When you define an array like so, int myArray[10];
 """
 
-class Fixed_Array():
+class FixedArray(object):
     def __init__(self, max_size, default_value):
         self._max_size = max_size
         self._defaul_value = default_value
@@ -74,5 +74,5 @@ class Fixed_Array():
 
 
 if __name__ == "__main__":
-    a = Fixed_Array(max_size=10, default_value=0)
+    a = FixedArray(max_size=10, default_value=0)
     print(a)

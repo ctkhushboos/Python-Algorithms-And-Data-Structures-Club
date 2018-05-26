@@ -16,7 +16,7 @@
 
 """
 
-class Array2D:
+class Array2D(object):
 
     def __init__(self, columns, rows, init_values):
         self.columms = columns

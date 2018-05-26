@@ -6,7 +6,7 @@
     https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree.
 """
 
-class Node:
+class Node(object):
     def __init__(self, value=None):
         self._value = value
         self._parent = None
@@ -80,7 +80,7 @@ class Node:
         return self.has_left_child() and self.has_right_child()
 
 
-class Binary_Search_Tree:
+class BinarySearchTree(object):
     def __init__(self):
         self._root = None
 
@@ -223,7 +223,7 @@ class Binary_Search_Tree:
             print(node.value)
 
 if __name__ == '__main__':
-    bst = Binary_Search_Tree()
+    bst = BinarySearchTree()
     arr = [7, 2, 5, 10, 9, 1]
     for i in arr:
         bst.insert(i)

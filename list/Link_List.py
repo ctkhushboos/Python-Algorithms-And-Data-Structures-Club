@@ -9,7 +9,7 @@
     This means that when you're dealing with a linked list, you should insert new items at the front whenever possible. That is an O(1) operation. Likewise for inserting at the back if you're keeping track of the tail pointer.
 """
 
-class Node:
+class Node(object):
     def __init__(self, value):
         self._value = value
         self._next = None
@@ -42,7 +42,7 @@ class Node:
     def previous(self, new_pre):
         self._previous = new_pre
 
-class Link_List:
+class LinkList(object):
     def __init__(self):
         self._head = None
 
@@ -163,7 +163,7 @@ class Link_List:
             raise
 
 if __name__ == '__main__':
-    list = Link_List()
+    list = LinkList()
     print(list.is_empty) #True
     print(list.first) #None
 

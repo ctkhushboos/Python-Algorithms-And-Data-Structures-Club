@@ -9,7 +9,7 @@
 
 from collections import deque
 
-class Queue():
+class Queue(object):
     def __init__(self):
         self.queue = deque()
 

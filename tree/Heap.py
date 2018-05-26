@@ -15,7 +15,7 @@ def order(value_1, value_2):
 def reverse(value_1, value_2):
     return value_1 > value_2
 
-class Heap:
+class Heap(object):
     def __init__(self, array=[], sort=order):
         self.sort = sort
         self.configure_heap(array)
