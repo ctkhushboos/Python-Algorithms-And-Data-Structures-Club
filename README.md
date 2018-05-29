@@ -6,11 +6,11 @@ for record the process of learning algorithm ans data structures
 the best way of learning is learning by doing, so i am going to implement all popular algorithms and data structures, and most of my code is from [swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club) i just have them python
 
 # Basic
-* [Stack](./Queues/Stack.py)
-* [Queue](./Queues/Queue.py)
-* [Insertion Sort](./sorting/Insertion_Sort.py)
+* [Stack](./queue/stack.py)
+* [Queue](./queue/queue.py)
+* [Insertion Sort](./sorting/insertion_sort.py)
 * [Binary Search](./search/binary_search.py)
-* [Binary Search Tree](./tree/Binary_Search_Tree.py)
+* [Binary Search Tree](./tree/binary_search_tree.py)
 
 # The Algorithms
 
