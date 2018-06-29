@@ -55,6 +55,7 @@ the best way of learning is learning by doing, so i am going to implement all po
 ## Tree
 
 * [Tree](./tree/tree.py). A general-purpose tree structure.
+* [Binary Tree](./tree/binary_tree.py).A tree where each node has at most two children.
 * [Binary Tree (BST)](./tree/binary_search_tree.py).  A binary tree that orders its nodes in a way that allows for fast queries.
 * [Heap](./tree/heap.py). A binary tree stored in an array, so it doesn't use pointers. Makes a great priority queue.
 Fibonacci Heap.
