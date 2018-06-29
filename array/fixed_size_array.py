@@ -47,7 +47,7 @@ class FixedArray(object):
         return self._count
 
     def append(self, new_element):
-        if count >= self.max_size:
+        if self._count >= self.max_size:
             raise "it's full cannot add new element"
         else:
             self._array[self.count] = new_element
@@ -56,18 +56,18 @@ class FixedArray(object):
     def remove_at(self, index):
         if index < 0:
             raise "index cnnot lower than zero"
-        elif index >= count:
+        elif index >= self._count:
             raise "index out of range"
         else:
-            count -= 1
+            self._count -= 1
             result = self._array[index]
-            self._array[index] = self._array[self.count]
-            self._array[self.count] = default_value
+            self._array[index] = self._array[self._count]
+            self._array[self.count] = self.default_value
             return result
 
     def remove_all(self):
-        for a in self._array:
-            a = default_value
+        for i in self._array:
+            self._array[i] = self.default_value
 
         self.count = 0
 

@@ -21,11 +21,13 @@
 
 """
 
+
 def swapAt(array, from_index, to_index):
     temp = array[from_index]
     array[from_index] = array[to_index]
     array[to_index] = temp
     return array
+
 
 def selection_sort(array):
     if len(array) <= 1:
@@ -41,6 +43,7 @@ def selection_sort(array):
             swapAt(array, i, lowest_index)
 
     return array
+
 
 if __name__ == '__main__':
     array = [4, 1, 3, 9, 2, 7]

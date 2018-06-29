@@ -7,6 +7,7 @@
 """
 from collections import deque
 
+
 class Deque(object):
     def __init__(self):
         self.deque = deque()
@@ -40,18 +41,18 @@ class Deque(object):
         return self.deque[0]
 
     def peek_back(self):
-        return slef.deque[-1]
+        return self.deque[-1]
 
 
 if __name__ == '__main__':
-    deque = Deque()
-    deque.enqueue(1)
-    deque.enqueue(2)
-    deque.enqueue(3)
-    deque.enqueue(4)
+    dequeue = Deque()
+    dequeue.enqueue(1)
+    dequeue.enqueue(2)
+    dequeue.enqueue(3)
+    dequeue.enqueue(4)
 
-    print(deque.dequeue())
-    print(deque.dequeue_back())
+    print(dequeue.dequeue())
+    print(dequeue.dequeue_back())
 
-    deque.enqueue_front(5)
-    print(deque.dequeue())
+    dequeue.enqueue_front(5)
+    print(dequeue.dequeue())

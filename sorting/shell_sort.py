@@ -12,6 +12,7 @@
     it may change the relative order of elements with equal values.
 """
 
+
 def insertion_sort(array, start, gap):
 
     array_copy = array.copy()
@@ -25,6 +26,7 @@ def insertion_sort(array, start, gap):
         array_copy[y] = temp
 
     return array_copy
+
 
 def shell_sort(array):
     sublist_count = len(array) / 2

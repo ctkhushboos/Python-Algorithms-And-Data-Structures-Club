@@ -4,6 +4,7 @@
 
 """
 
+
 class TreeNode(object):
     def __init__(self, value):
         self._value = value
@@ -11,13 +12,13 @@ class TreeNode(object):
         self._parent = None
 
     def __repr__(self):
-        return "value: {0} childern: {1} parent: {2}".format(self._value, \
-         [c.value for c in self._childern], "None" if self.parent is None else \
-         self.parent.value)
+        return "value: {0} childern: {1} parent: {2}".format(
+            self._value, [c.value for c in self._childern], "None"
+            if self.parent is None else self.parent.value)
 
     @property
     def value(self):
-        return  self._value
+        return self._value
 
     @value.setter
     def value(self, new_value):
@@ -38,7 +39,7 @@ class TreeNode(object):
     def search(self, value):
 
         if value == self.value:
-            return  self
+            return self
 
         for child in self._childern:
             if child.search(value):

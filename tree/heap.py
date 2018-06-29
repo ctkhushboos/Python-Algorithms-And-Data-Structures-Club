@@ -12,13 +12,16 @@
 def order(value_1, value_2):
     return value_1 < value_2
 
+
 def reverse(value_1, value_2):
     return value_1 > value_2
+
 
 class Heap(object):
     def __init__(self, array=[], sort=order):
         self.sort = sort
         self.configure_heap(array)
+        self.nodes = array
 
     def __repr__(self):
         return '{}'.format(self.nodes)
@@ -35,7 +38,8 @@ class Heap(object):
     def order_criteria(self):
         """
             determines how to compare two nodes in the heap.
-            use 'order' for a max-heap or 'reverse' for a min-heap, or provide a comparing
+            use 'order' for a max-heap or 'reverse' for a min-heap,
+            or provide a comparing
             method if the heap is made of custom elements, for example tuple
         """
         return self.sort
@@ -76,7 +80,6 @@ class Heap(object):
         """
         return int(2 * index + 2)
 
-
     def peak(self):
         """
             return the max value in the heap (for a max-heap) or the minimum
@@ -84,7 +87,7 @@ class Heap(object):
         """
         try:
             return self.nodes[0]
-        except:
+        except ValueError:
             return None
 
     def insert(self, value):
@@ -131,7 +134,7 @@ class Heap(object):
             # shifting this new first node into its proper position
             value = self.nodes[0].copy()
             self.nodes[0] = self.nodes.remove_last()
-            shift_down(0)
+
             return value
 
     def remove(self, index):
@@ -161,7 +164,8 @@ class Heap(object):
         child = self.nodes[child_index]
         parent_index = self.parent_index(child_index)
 
-        while child_index > 0 and self.order_criteria(child, self.nodes[parent_index]):
+        while child_index > 0 and self.order_criteria(
+                child, self.nodes[parent_index]):
             self.nodes[child_index] = self.nodes[parent_index]
             child_index = parent_index
             parent_index = self.parent_index(child_index)
@@ -181,11 +185,11 @@ class Heap(object):
         # if 'float down' the tree untill the heap property is restored
         first = from_index
         if left_child_index < end_index and self.order_criteria(
-        self.nodes[left_child_index], self.nodes[first]):
+                self.nodes[left_child_index], self.nodes[first]):
             first = left_child_index
 
         if right_child_index < end_index and self.order_criteria(
-        self.nodes[right_child_index], self.nodes[first]):
+                self.nodes[right_child_index], self.nodes[first]):
             first = right_child_index
 
         if first == from_index:

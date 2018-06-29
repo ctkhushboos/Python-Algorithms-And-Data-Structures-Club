@@ -11,24 +11,27 @@
     Put the numbers in an unsorted pile.
     Split the pile into two. Now, you have two unsorted piles of numbers.
 
-    Keep splitting the resulting piles until you cannot split anymore. In the end,
-    you will have n piles with one number in each pile.
+    Keep splitting the resulting piles until you cannot split anymore.
+    In the end, you will have n piles with one number in each pile.
 
-    Begin to merge the piles together by pairing them sequentially. During each merge,
-    put the contents in sorted order.
+    Begin to merge the piles together by pairing them sequentially.
+    During each merge, put the contents in sorted order.
 
     This is fairly easy because each individual pile is already sorted.
 """
+
 
 def merge(left_array, right_array):
     """
         This method may look scary, but it is quite straightforward:
 
-        You need two indexes to keep track of your progress for the two arrays while merging.
+        You need two indexes to keep track of your progress
+        or the two arrays while merging.
 
         This is the merged array.
         It is empty right now,
-        but you will build it up in subsequent steps by appending elements from the other arrays.
+        but you will build it up in subsequent steps by appending elements
+        from the other arrays.
 
     """
     left_index = 0
@@ -70,12 +73,13 @@ def merge(left_array, right_array):
 
     return order_pile
 
+
 def merge_sort(array):
     if len(array) <= 1:
         return array
 
     middleIndex = int(len(array) / 2)
-    left_array = merge_sort(array[0:middleIndex ])
+    left_array = merge_sort(array[0: middleIndex])
     right_array = merge_sort(array[middleIndex:len(array)])
 
     return merge(left_array, right_array)

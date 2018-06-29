@@ -13,12 +13,14 @@ a max-heap, so that the first element in the array is the largest
 
 import heapq
 
+
 def heap_sort(iterable):
     h = []
     for value in iterable:
         heapq.heappush(h, value)
 
     return [heapq.heappop(h) for i in range(len(h))]
+
 
 if __name__ == "__main__":
     array = [9, 2, 3, 4, 6, 3, 2, 2, 0, -1, -99, 100]

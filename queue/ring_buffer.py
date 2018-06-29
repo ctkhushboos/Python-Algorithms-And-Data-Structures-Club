@@ -1,11 +1,17 @@
 """
-
     Also known as a circular buffer.
 
-    The problem with a queue based on an array is that adding new items to the back of the queue is fast, O(1), but removing items from the front of the queue is slow, O(n). Removing is slow because it requires the remaining array elements to be shifted in memory.
+    The problem with a queue based on an array is that adding new items to the
+    back of the queue is fast, O(1), but removing items from the front of the
+    queue is slow, O(n). Removing is slow because it requires the remaining
+    array elements to be shifted in memory.
 
-    A more efficient way to implement a queue is to use a ring buffer or circular buffer. This is an array that conceptually wraps around back to the beginning, so you never have to remove any items. All operations are O(1).
+    A more efficient way to implement a queue is to use a ring buffer or
+    circular buffer. This is an array that conceptually wraps around back to
+    the beginning, so you never have to remove any items.
+    All operations are O(1).
 """
+
 
 class RingBuffer(object):
     def __init__(self, count):
@@ -45,6 +51,7 @@ class RingBuffer(object):
         else:
             return None
 
+
 if __name__ == '__main__':
     buffer = RingBuffer(5)
     buffer.write(123)
@@ -52,14 +59,14 @@ if __name__ == '__main__':
     buffer.write(789)
     buffer.write(666)
 
-    print(buffer.read()) # 123
-    print(buffer.read()) # 456
-    print(buffer.read()) # 789
+    print(buffer.read())  # 123
+    print(buffer.read())  # 456
+    print(buffer.read())  # 789
 
     buffer.write(333)
     buffer.write(555)
 
-    print(buffer.read()) # 666
-    print(buffer.read()) # 333
-    print(buffer.read()) # 555
-    print(buffer.read()) # None
+    print(buffer.read())  # 666
+    print(buffer.read())  # 333
+    print(buffer.read())  # 555
+    print(buffer.read())  # None

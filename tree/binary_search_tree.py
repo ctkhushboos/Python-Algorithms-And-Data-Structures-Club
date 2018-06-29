@@ -6,6 +6,7 @@
     https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree.
 """
 
+
 class Node(object):
     def __init__(self, value=None):
         self._value = value
@@ -19,15 +20,19 @@ class Node(object):
     @property
     def value(self):
         return self._value
+
     @property
     def parent(self):
         return self._parent
+
     @property
     def left(self):
         return self._left
+
     @property
     def right(self):
         return self._right
+
     @property
     def height(self):
         if self.is_leaf():
@@ -44,20 +49,24 @@ class Node(object):
     @value.setter
     def value(self, new_value):
         self._value = new_value
+
     @parent.setter
     def parent(self, new_value):
         self._parent = new_value
+
     @left.setter
     def left(self, new_value):
         self._left = new_value
+
     @right.setter
     def right(self, new_value):
         self._right = new_value
+
     def is_root(self):
-        return self._parent == None
+        return self._parent is None
 
     def is_leaf(self):
-        return self._left == None and self._right == None
+        return self._left is None and self._right is None
 
     def is_left_child(self):
         if self.parent is not None:
@@ -68,10 +77,10 @@ class Node(object):
             return self._parent._left == self
 
     def has_left_child(self):
-        return self._left != None
+        return self._left is not None
 
     def has_right_child(self):
-        return self._left != None
+        return self._left is not None
 
     def has_any_child(self):
         return self.has_left_child() or self.has_right_child()
@@ -92,7 +101,7 @@ class BinarySearchTree(object):
         return self._root
 
     def insert(self, new_value):
-        if self._root == None:
+        if self._root is None:
             self._root = Node(new_value)
         else:
             current = self._root
@@ -221,6 +230,7 @@ class BinarySearchTree(object):
             self.postorder(node.left)
             self.postorder(node.right)
             print(node.value)
+
 
 if __name__ == '__main__':
     bst = BinarySearchTree()

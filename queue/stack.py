@@ -4,6 +4,7 @@
    Adding at the end is O(1)
 """
 
+
 class Stack(object):
     def __init__(self):
         self.list_ = []
@@ -24,6 +25,7 @@ class Stack(object):
     @property
     def count(self):
         return len(self.list_)
+
 
 if __name__ == '__main__':
     stack = Stack()

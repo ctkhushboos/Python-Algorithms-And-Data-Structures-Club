@@ -7,23 +7,28 @@ import random
     It was invented way back in 1959 by Tony Hoare,
     at a time when recursion was still a fairly nebulous concept.
 
-    quicksort does not produce a "stable" sort (unlike merge sort, for example).
+    quicksort does not produce a "stable" sort (unlike merge sort, for example)
     Most of the time that's not a big deal.
 """
+
 
 def equals(element_a, element_b):
     return element_a == element_b
 
+
 def less(element_a, element_b):
     return element_a < element_b
 
+
 def greater(element_a, element_b):
     return element_a > element_b
+
 
 def swapt_at(array, indexFrom, indexTo):
     temp = array[indexFrom]
     array[indexFrom] = array[indexTo]
     array[indexTo] = temp
+
 
 def quick_sort(array):
     """ basic way """
@@ -33,6 +38,7 @@ def quick_sort(array):
         return array
     else:
         pivot = array[int(size / 2)]
+
         def less_pivot(element):
             return less(element, pivot)
 
@@ -69,6 +75,7 @@ def partition_dutch_flag(array, low, high, pivotIndex):
 
     return smaller, larger
 
+
 def quick_sort_dutch_flag(array, low, high):
     if low < high:
         pivotIndex = random.randint(low, high)
@@ -76,9 +83,9 @@ def quick_sort_dutch_flag(array, low, high):
         quick_sort_dutch_flag(array, low, p - 1)
         quick_sort_dutch_flag(array, q + 1, high)
 
+
 if __name__ == '__main__':
     test_array = [10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26]
-    #print(quick_sort(test_array))
 
     quick_sort_dutch_flag(test_array, 0, len(test_array) - 1)
 

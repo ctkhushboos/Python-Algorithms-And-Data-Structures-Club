@@ -1,5 +1,4 @@
 """
-
     In C and Objective-C, you can write the following line
     int cookies[9][7];
 
@@ -16,12 +15,13 @@
 
 """
 
-class Array2D(object):
 
+class Array2D(object):
     def __init__(self, columns, rows, init_values):
         self.columms = columns
         self.rows = rows
-        self.array = [[init_values for x in range(columns)] for y in range(rows)]
+        self.array = [[init_values for _ in range(columns)]
+                      for _ in range(rows)]
 
     def __getitem__(self, x):
         return self.array[x]
@@ -31,7 +31,7 @@ class Array2D(object):
 
     @property
     def columms(self):
-        return  self._columms
+        return self._columms
 
     @columms.setter
     def columms(self, value):
@@ -44,6 +44,7 @@ class Array2D(object):
     @rows.setter
     def rows(self, value):
         self._rows = value
+
 
 if __name__ == "__main__":
     test = Array2D(2, 2, 0)

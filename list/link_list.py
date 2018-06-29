@@ -1,13 +1,27 @@
 """
 
-    Most operations on a linked list have O(n) time, so linked lists are generally slower than arrays. However, they are also much more flexible -- rather than having to copy large chunks of memory around as with an array, many operations on a linked list just require you to change a few pointers.
+    Most operations on a linked list have O(n) time, so linked lists are
+    generally slower than arrays. However, they are also much more flexible
+    -- rather than having to copy large chunks of memory around as with an
+    array, many operations on a linked list just require you to change a
+    few pointers.
 
-    The reason for the O(n) time is that you can't simply write list[2] to access node 2 from the list. If you don't have a reference to that node already, you have to start at the head and work your way down to that node by following the next pointers (or start at the tail and work your way back using the previous pointers).
+    The reason for the O(n) time is that you can't simply write list[2] to
+    access node 2 from the list. If you don't have a reference to that
+    node already, you have to start at the head and work your way down to
+    that node by following the next pointers (or start at the tail and
+    work your way back using the previous pointers).
 
-    But once you have a reference to a node, operations like insertion and deletion are really quick. It's just that finding the node is slow.
+    But once you have a reference to a node, operations like insertion and
+    deletion are really quick. It's just that finding the node is slow.
 
-    This means that when you're dealing with a linked list, you should insert new items at the front whenever possible. That is an O(1) operation. Likewise for inserting at the back if you're keeping track of the tail pointer.
+    This means that when you're dealing with a linked list, you should insert
+    new items at the front whenever possible. That is an O(1) operation.
+
+    Likewise for inserting at the back if you're keeping track of
+    the tail pointer.
 """
+
 
 class Node(object):
     def __init__(self, value):
@@ -42,6 +56,7 @@ class Node(object):
     def previous(self, new_pre):
         self._previous = new_pre
 
+
 class LinkList(object):
     def __init__(self):
         self._head = None
@@ -64,7 +79,7 @@ class LinkList(object):
 
     @property
     def is_empty(self):
-        return self._head == None
+        return self._head is None
 
     @property
     def first(self):
@@ -153,58 +168,59 @@ class LinkList(object):
         node = self.find_node_at(index)
         try:
             return self.remove(node)
-        except:
+        except ValueError:
             raise
 
     def remove_last(self):
         try:
             return self.remove(self.last)
-        except:
+        except ValueError:
             raise
+
 
 if __name__ == '__main__':
     list = LinkList()
-    print(list.is_empty) #True
-    print(list.first) #None
+    print(list.is_empty)  # True
+    print(list.first)  # None
 
     list.append('Hello')
-    print(list.is_empty) # False
-    print(list.first.value) # Hello
-    print(list.last.value) # Hello
+    print(list.is_empty)  # False
+    print(list.first.value)  # Hello
+    print(list.last.value)  # Hello
     print(list)
 
     list.append('World')
-    print(list.first.value) # Hello
-    print(list.last.value) # World
+    print(list.first.value)  # Hello
+    print(list.last.value)  # World
     print(list)
 
-    print(list.first.previous) # None
-    print(list.first.next.value) # World
-    print(list.last.previous.value) # Hello
-    print(list.last.next) # None
+    print(list.first.previous)  # None
+    print(list.first.next.value)  # World
+    print(list.last.previous.value)  # Hello
+    print(list.last.next)  # None
 
-    print(list.find_node_at(0).value) # Hello
-    print(list.find_node_at(1).value) # World
+    print(list.find_node_at(0).value)  # Hello
+    print(list.find_node_at(1).value)  # World
 
-    print(list[0]) #Hellow
-    print(list[1]) # World
+    print(list[0])  # Hellow
+    print(list[1])  # World
 
     list.insert('Python', 1)
-    print(list[0]) # Hello
-    print(list[1]) # Python
-    print(list[2]) # World
+    print(list[0])  # Hello
+    print(list[1])  # Python
+    print(list[2])  # World
     print(list)
 
-    print(list.remove(list.first)) # Hello
-    print(list.count) # 2
-    print(list[0]) # Python
-    print(list[1]) # World
+    print(list.remove(list.first))  # Hello
+    print(list.count)  # 2
+    print(list[0])  # Python
+    print(list[1])  # World
 
-    print(list.remove_last()) # World
-    print(list.count) # 1
-    print(list[0]) # Python
+    print(list.remove_last())  # World
+    print(list.count)  # 1
+    print(list[0])  # Python
 
-    print(list.remove_at(0)) # Python
-    print(list.count) # 0
+    print(list.remove_at(0))  # Python
+    print(list.count)  # 0
 
     print(list)

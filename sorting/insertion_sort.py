@@ -24,10 +24,12 @@
 
 """
 
+
 def swapAt(_list, x, y):
     temp = _list[x]
     _list[x] = _list[y]
     _list[y] = temp
+
 
 def insertion_sort(array):
     array_copy = array.copy()
@@ -38,6 +40,7 @@ def insertion_sort(array):
             y -= 1
 
     return array_copy
+
 
 def _insertion_sort(array):
     """ improve the performance of last one"""
@@ -53,9 +56,9 @@ def _insertion_sort(array):
 
     return array_copy
 
+
 if __name__ == '__main__':
     _list = [1, 6, 1, 5, 0, -1, 2, 6]
     swapAt(_list, 0, 1)
     print(_list)
-    #print(insertion_sort(_list))
     print(_insertion_sort(_list))

@@ -2,7 +2,8 @@
 
     A fixed-size sequence of n bits. Also known as bit array or bit vector.
 
-    To store whether something is true or false you use a Bool. Every programmer
+    To store whether something is true or false you use a Bool.
+    Every programmer
     knows that... But what if you need to remember whether 10,000 things are
     true or not?
 
@@ -24,9 +25,6 @@
     watch above tutorial
 
 """
-
-import numpy as np
-
 
 if __name__ == "__main__":
     pass

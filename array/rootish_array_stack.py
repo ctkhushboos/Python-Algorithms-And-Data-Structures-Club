@@ -13,6 +13,7 @@
 
 import math
 
+
 class RootishArrayStack(object):
     def __init__(self):
         self._blocks = []
@@ -37,13 +38,13 @@ class RootishArrayStack(object):
 
     @property
     def capacity(self):
-        return  int(len(self._blocks) * (len(self._blocks) + 1) / 2)
+        return int(len(self._blocks) * (len(self._blocks) + 1) / 2)
 
     def block(self, from_index):
         return int(math.ceil((-3.0 + math.sqrt(9.0 + 8.0 * from_index)) / 2))
 
     def inner_block_index(self, from_index, from_block):
-        return  int(from_index - from_block * (from_block + 1) / 2)
+        return int(from_index - from_block * (from_block + 1) / 2)
 
     def grow_if_need(self):
         if self.capacity - len(self._blocks) < self.count + 1:
@@ -52,10 +53,9 @@ class RootishArrayStack(object):
 
     def shrink_if_need(self):
         if self.capacity + len(self._blocks) >= self.count:
-            while len(self._blocks) > 0 and (len(self._blocks) - 2) * \
-            (len(self._blocks) - 1) / 2 > self.count:
+            while len(self._blocks) > 0 and (len(self._blocks) - 2) * (
+                    len(self._blocks) - 1) / 2 > self.count:
                 self._blocks.remove(self._blocks[int(len(self.block) - 1)])
-
 
     def insert(self, element, at_index):
         self.grow_if_need()

@@ -19,7 +19,7 @@ class OrderdArray(object):
         self._array = sorted(array)
 
     def __repr__(self):
-        return  "{0}".format(self._array)
+        return "{0}".format(self._array)
 
     def __getitem__(self, index):
         if index < 0:
@@ -61,7 +61,7 @@ class OrderdArray(object):
             else:
                 end_index = mid_index
 
-        return  start_index
+        return start_index
 
     def insert(self, new_element):
         i = self.find_insert_point(new_element)
